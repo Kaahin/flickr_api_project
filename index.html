@@ -5,40 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet_2" href="menu.scss" />
     <title>Flickr Api Project</title>
   </head>
   <body>
-    <nav>
-      <div id="menuToggle">
-        <input type="checkbox" />
-        <span id="span1"></span>
-        <span id="span2"></span>
-      </div>
-      <div id="logo">
-        <a href="http://127.0.0.1:8080/" ><h1>Flickr API</h1></a>
-      </div>
-      <div id="searchbar">
-        <img src="Extensions\search_magnifying_class_icon.png" />
-      </div>
-    </nav>
-    <div class="container">
-      <form action="/" method="GET" id="form" class="form">
-        <input
-          type="search"
-          placeholder="Search"
-          class="search-field"
-          id="search"
-        />
-        <button id="submit" class="search-button">
-          <img
-            src="Extensions\right-arrow-svgrepo-com.svg"
-            alt="right arrow icon"
+
+      <nav id="navbar">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span id="span1"></span>
+          <span id="span2"></span>
+        </div>
+        <div id="logo">
+          <a href="http://127.0.0.1:8080/"><h1 id="logoid">Flickr API</h1></a>
+        </div>
+        <div id="searchbar">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <img src="Extensions\magnifying-glass-svgrepo-com.svg"/>
+          </a>
+        </div>
+      </nav>
+      <div class="container" id="myLinks">
+        <form action="/" method="GET" id="form" class="form">
+          <input
+            type="search"
+            placeholder="Search"
+            class="search-field"
+            id="search"
           />
+          <button id="submit" class="search-button">
+            <img
+              src="Extensions\right-arrow-svgrepo-com.svg"
+              alt="right arrow icon"
+            />
+          </button>
+        </form>
+      </div>
+
+
+    <main>
+      <div class="frame">
+        <button id="left">
+          <object data="Extensions\arrow-left-svgrepo-com.svg"></object>
         </button>
-      </form>
-    </div>
-    <ul id="lista"></ul>
+        <ul id="lista"></ul>
+        <button id="right">
+          <object data="Extensions\arrow-right-svgrepo-com.svg"></object>
+        </button>
+      </div>
+    </main>
+
+    <footer>
+        
+    </footer>
+
     <script src="index.js"></script>
   </body>
 </html>
