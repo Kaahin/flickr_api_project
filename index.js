@@ -39,3 +39,4 @@ const showPhotos = array => {
     });
 };
 
+
