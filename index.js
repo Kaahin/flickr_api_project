@@ -1,6 +1,6 @@
 // Koppla HTML till JS
 const lista = document.querySelector('#lista');
-const form = document.querySelector('form');
+const form = document.querySelector('#form');
 const searchTerm = document.querySelector('#search');
 
 // anrop till api
