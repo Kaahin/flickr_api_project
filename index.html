@@ -8,7 +8,7 @@
     <title>Flickr Api Project</title>
   </head>
   <body>
-
+    <div id="top-row">
       <nav id="navbar">
         <div id="menuToggle">
           <input type="checkbox" />
@@ -20,7 +20,7 @@
         </div>
         <div id="searchbar">
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <img src="Extensions\magnifying-glass-svgrepo-com.svg"/>
+            <img src="Extensions\magnifying-glass-svgrepo-com.svg" />
           </a>
         </div>
       </nav>
@@ -40,22 +40,24 @@
           </button>
         </form>
       </div>
-
+    </div>
 
     <main>
       <div class="frame">
-        <button id="left">
-          <object data="Extensions\arrow-left-svgrepo-com.svg"></object>
+        <button class="arrow-button" id="left" onclick="buttonClickLeft()">
+          <img src="Extensions\arrow-left-svgrepo-com.svg" />
         </button>
-        <ul id="lista"></ul>
-        <button id="right">
-          <object data="Extensions\arrow-right-svgrepo-com.svg"></object>
+        <div class="outerborder">
+          <ul id="lista"></ul>
+        </div>
+        <button class="arrow-button" id="right" onclick="buttonClickRight()">
+          <img src="Extensions\arrow-right-svgrepo-com.svg" />
         </button>
       </div>
     </main>
 
     <footer>
-        
+      <p>&copy; Abdi 2021, All Rights Reserved</p>
     </footer>
 
     <script src="index.js"></script>
