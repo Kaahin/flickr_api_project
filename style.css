@@ -153,6 +153,10 @@ nav {
 main {
   width: 100vw;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
 }
 main div.frame {
   width: 100vw;
