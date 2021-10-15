@@ -1,16 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
-
+html {
+    overflow: hidden;
+}
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: red;
   margin: 0;
   padding: 0;
+  border : none;
   overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border : none;
 }
 
 p {
     margin: 0;
+    padding: 0;
 }
 
 #top-row {
@@ -132,7 +142,7 @@ nav {
 
 #lista ::before {
   list-style: none;
-  margin: 2rem 0;
+  margin: 0 0;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 0.5rem;
@@ -142,7 +152,7 @@ nav {
 
 main {
   width: 100vw;
-  height: auto;
+  margin: 0;
 }
 main div.frame {
   width: 100vw;
