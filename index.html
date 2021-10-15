@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Flickr Api Project</title>
-</head>
-<body>
-    <h1>Flickr API </h1>
-    <form>
-        <input type="text" id="search">
-        <button id="submit">Show me the Photes</button>
-    </form>
-    <ul id="lista"></ul>
+  </head>
+  <body>
+
+      <nav id="navbar">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span id="span1"></span>
+          <span id="span2"></span>
+        </div>
+        <div id="logo">
+          <a href="https://kaahin.github.io/flickr_api_project/"><h1 id="logoid">Flickr API</h1></a>
+        </div>
+        <div id="searchbar">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <img src="Extensions\magnifying-glass-svgrepo-com.svg"/>
+          </a>
+        </div>
+      </nav>
+      <div class="container" id="myLinks">
+        <form action="/" method="GET" id="form" class="form">
+          <input
+            type="search"
+            placeholder="Search"
+            class="search-field"
+            id="search"
+          />
+          <button id="submit" class="search-button">
+            <img
+              src="Extensions\right-arrow-svgrepo-com.svg"
+              alt="right arrow icon"
+            />
+          </button>
+        </form>
+      </div>
+
+
+    <main>
+      <div class="frame">
+        <button id="left">
+          <object data="Extensions\arrow-left-svgrepo-com.svg"></object>
+        </button>
+        <ul id="lista"></ul>
+        <button id="right">
+          <object data="Extensions\arrow-right-svgrepo-com.svg"></object>
+        </button>
+      </div>
+    </main>
+
+    <footer>
+        
+    </footer>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

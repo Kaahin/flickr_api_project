@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: red;
+}
+
+nav {
+  height : 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  margin: 0px auto;
+  width: auto;
+  height: 60px;
+  display: none;
+  background-color: black;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-field {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+}
+
+
+.search-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: -33px;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+#searchbar {
+  width: 60px;
+  height: 60px;
+}
+
+#logo {
+  width: auto;
+  height: 60px;
+}
+
+#logo a {
+  text-decoration: none;
+}
+
+#logo a h1 {
+  color: black;
+  height: 60px;
+  font-family: "Saira Stencil One", cursive;
+}
+
+#menuToggle {
+  /* overflow: hidden; */
+  /* position: absolute; */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menuToggle input {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; /* hide input */
+  z-index: 1; /* top of the menu */
+}
+
+#menuToggle span {
+  width: 55px;
+  height: 8px;
+  margin-bottom: 10px;
+  background: black;
+  border-radius: 0px;
+  -webkit-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -moz-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -ms-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -o-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+}
+
+#span1 {
+  transform-origin: 4px 0px;
+}
+
+#menuToggle input:checked ~ #span1 {
+  background-color: black;
+  transform: rotate(45deg) translate(8px);
+}
+
+#menuToggle input:checked ~ #span2 {
+  background-color: black;
+  transform: rotate(495deg) translate(4px);
+}
+
+#lista ::before {
+  list-style: none;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  color: black;
+}
+
+main div.frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#lista {
+  list-style: none;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  color: black;
+}
+
+main .frame button {
+  height: auto;
+  border-style: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
