@@ -28,25 +28,43 @@ async function getData(query) {
   showPhotos(data.photos.photo);
 }
 
+let arr = [];
+let i = 0;
+
 const showPhotos = (array) => {
   let base_url_photo = "https://live.staticflickr.com/";
   let size_suffix = "w";
 
-  array.forEach((photo) => {
-    const item = document.createElement("li");
-    item.innerHTML = `<p>${photo.title}</p><img src="${base_url_photo}${photo.server}/${photo.id}_${photo.secret}_${size_suffix}.jpg">`;
-    lista.appendChild(item);
+  array.forEach((photo, index) => {
+    arr[
+      index
+    ] = `<img src="${base_url_photo}${photo.server}/${photo.id}_${photo.secret}_${size_suffix}.jpg"><p>${photo.title}</p>`;
   });
+
+  lista.innerHTML = `<li>${arr[i]}</li>`;;
 };
 
-//  const changePicture = () => {
-//      var lista = document.getElementById("lista");
-//      var next = document.getElementById("right");
-//      /* var prev = document.getElementById("left"); */
-//     if (lista.style.display === "none") {
-//         lista.style.display === "grid";
-//     }
-// };
+function buttonClickRight() {
+  if (i == arr.length) {
+    i = 0;
+  }
+  if (arr.length === 0) {
+    lista.innerHTML = `<p>Search After Item First</p>`;
+  } else {
+    lista.innerHTML = `<li>${arr[i++]}</li>`;
+  }
+}
+
+function buttonClickLeft() {
+  if (i == 0) {
+    i = arr.length - 1;
+  }
+  if (arr.length === 0) {
+    lista.innerHTML = `<p>Search After Item First</p>`;
+  } else {
+    lista.innerHTML = `<li>${arr[i--]}</li>`;
+  }
+}
 
 function myFunction() {
   var x = document.getElementById("myLinks");
@@ -64,18 +82,15 @@ function myFunction() {
     y2.style.color = "black";
     y3.style.filter = "invert(0)";
   } else {
-    y.style.background = "black";  
+    y.style.background = "black";
     y11.style.background = "red";
     y12.style.background = "red";
-    y2.style.color= "red";
+    y2.style.color = "red";
     y3.style.filter = "invert(1)";
     y3.style.fill = "red";
     x.style.display = "flex";
     x.style.flexDirection = "row";
     x.style.justifyContent = "center";
     x.style.alignItems = "center";
-  };
-};
-
-
-
+  }
+}

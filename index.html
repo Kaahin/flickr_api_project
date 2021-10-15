@@ -8,54 +8,56 @@
     <title>Flickr Api Project</title>
   </head>
   <body>
-
-      <nav id="navbar">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span id="span1"></span>
-          <span id="span2"></span>
-        </div>
-        <div id="logo">
-          <a href="https://kaahin.github.io/flickr_api_project/"><h1 id="logoid">Flickr API</h1></a>
-        </div>
-        <div id="searchbar">
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <img src="Extensions\magnifying-glass-svgrepo-com.svg"/>
-          </a>
-        </div>
-      </nav>
-      <div class="container" id="myLinks">
-        <form action="/" method="GET" id="form" class="form">
-          <input
-            type="search"
-            placeholder="Search"
-            class="search-field"
-            id="search"
-          />
-          <button id="submit" class="search-button">
-            <img
-              src="Extensions\right-arrow-svgrepo-com.svg"
-              alt="right arrow icon"
-            />
-          </button>
-        </form>
+    <div id="top-row">
+    <nav id="navbar">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span id="span1"></span>
+        <span id="span2"></span>
       </div>
-
+      <div id="logo">
+        <a href="http://127.0.0.1:8080/"><h1 id="logoid">Flickr API</h1></a>
+      </div>
+      <div id="searchbar">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <img src="Extensions\magnifying-glass-svgrepo-com.svg" />
+        </a>
+      </div>
+    </nav>
+    <div class="container" id="myLinks">
+      <form action="/" method="GET" id="form" class="form">
+        <input
+          type="search"
+          placeholder="Search"
+          class="search-field"
+          id="search"
+        />
+        <button id="submit" class="search-button">
+          <img
+            src="Extensions\right-arrow-svgrepo-com.svg"
+            alt="right arrow icon"
+          />
+        </button>
+      </form>
+    </div>
+    </div>
 
     <main>
       <div class="frame">
-        <button id="left">
-          <object data="Extensions\arrow-left-svgrepo-com.svg"></object>
+        <button class="arrow-button" id="left" onclick="buttonClickLeft()">
+          <img src="Extensions\arrow-left-svgrepo-com.svg" />
         </button>
-        <ul id="lista"></ul>
-        <button id="right">
-          <object data="Extensions\arrow-right-svgrepo-com.svg"></object>
+        <div class="outerborder">
+          <ul id="lista"></ul>
+        </div>
+        <button class="arrow-button" id="right" onclick="buttonClickRight()">
+          <img src="Extensions\arrow-right-svgrepo-com.svg" />
         </button>
       </div>
     </main>
 
     <footer>
-        
+      <p> &copy; Abdi 2021, All Rights Reserved</p>
     </footer>
 
     <script src="index.js"></script>
