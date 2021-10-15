@@ -1,25 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
-
+html {
+  overflow: hidden;
+}
 body {
-  display: grid;
-  grid-template-rows: auto, auto, auto;
-  grid-template-areas: "top-row","main","footer";
-  /* grid-template-columns: 1fr; */
-  align-items: space-between;
   width: 100vw;
   height: 100vh;
   background: red;
   margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 #top-row {
-    width: 100vw;
-    height: 124px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  width: 100vw;
+  height: 124px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
+
 nav {
   width: 100vw;
   height: 64px;
@@ -82,8 +94,7 @@ nav {
 }
 
 #menuToggle {
-  /* overflow: hidden; */
-  /* position: absolute; */
+  overflow: hidden;
   width: 60px;
   height: 60px;
   display: flex;
@@ -131,7 +142,7 @@ nav {
 
 #lista ::before {
   list-style: none;
-  margin: 2rem 0;
+  margin: 0 0;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 0.5rem;
@@ -141,8 +152,14 @@ nav {
 
 main {
   width: 100vw;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
 }
 main div.frame {
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -167,25 +184,18 @@ main div.frame {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  /* color: black; */
-  background-color: #7d7d7d;
-  background-image: url("your texture tile address for the inside border");
-  display: block;
-  max-height: 75vh;
-  width: auto;
-  margin: auto;
-  border-radius: 7px 7px 7px 7px;
-  -moz-border-radius: 7px 7px 7px 7px;
-  -webkit-border-radius: 7px 7px 7px 7px;
-  border: 1px solid #61201e;
-  box-shadow: 0px 0px 60px -9px rgba(0, 0, 0, 1);
+}
+
+#lista img {
+  height: 40vh;
+  width: 40vw;
 }
 
 #lista p {
   font-family: "Saira Stencil One", cursive;
   border-style: solid;
   border-color: black;
+  text-align: center;
 }
 
 .arrow-button img {
