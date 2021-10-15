@@ -26,7 +26,7 @@ async function getData(query) {
   // Data vi får tillbaka
   const data = await response.json();
   showPhotos(data.photos.photo);
-}
+};
 
 let arr = [];
 let i = 0;
@@ -38,33 +38,33 @@ const showPhotos = (array) => {
   array.forEach((photo, index) => {
     arr[
       index
-    ] = `<img src="${base_url_photo}${photo.server}/${photo.id}_${photo.secret}_${size_suffix}.jpg"><p>${photo.title}</p>`;
+    ] = `<img src="${base_url_photo}${photo.server}/${photo.id}_${photo.secret}_${size_suffix}.jpg" class="pictures"><p>${photo.title}</p>`;
   });
 
-  lista.innerHTML = `<li>${arr[i]}</li>`;;
+  lista.innerHTML = `<li>${arr[i]}</li>`;
 };
 
 function buttonClickRight() {
   if (i == arr.length) {
     i = 0;
-  }
+  };
   if (arr.length === 0) {
     lista.innerHTML = `<p>Search After Item First</p>`;
   } else {
     lista.innerHTML = `<li>${arr[i++]}</li>`;
-  }
-}
+  };
+};
 
 function buttonClickLeft() {
   if (i == 0) {
     i = arr.length - 1;
-  }
+  };
   if (arr.length === 0) {
     lista.innerHTML = `<p>Search After Item First</p>`;
   } else {
     lista.innerHTML = `<li>${arr[i--]}</li>`;
-  }
-}
+  };
+};
 
 function myFunction() {
   var x = document.getElementById("myLinks");
@@ -92,5 +92,5 @@ function myFunction() {
     x.style.flexDirection = "row";
     x.style.justifyContent = "center";
     x.style.alignItems = "center";
-  }
-}
+  };
+};
